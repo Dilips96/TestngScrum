@@ -44,7 +44,7 @@ public class EkbDB
 	
 	
 	
-	@Test(priority=0)
+	@Test(priority=0,groups="display logo")
 	public void logodisplay() 
 	{
 		
@@ -54,7 +54,7 @@ public class EkbDB
 	}
 	
 	
-	@Test(priority=1)
+	@Test(priority=1,groups="signin")
 	public void signin() throws InterruptedException
 	{
 		driver.findElement(By.xpath("//a[@class=\"sign-in-btn\"]")).click();
