@@ -5,11 +5,13 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -44,7 +46,7 @@ public class EkbDB
 	
 	
 	
-	@Test(priority=0,groups="display logo")
+	@Test(priority=0,groups="display logo" )
 	public void logodisplay() 
 	{
 		
@@ -70,16 +72,52 @@ public class EkbDB
 		driver.findElement(By.xpath("//input[@value=\"Sign In\"]")).click();
 		Thread.sleep(3000);
 		
-	}
-	
-	
-	@Test(priority=2,enabled=false)
-	public void product() throws InterruptedException
-	{
 		
 		driver.findElement(By.xpath("//h2[text()=\"My Products/Services\"]")).click();
 		Thread.sleep(4000);
 		
+		driver.findElement(By.xpath("//button[@value=\"Add Products\"]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("(//span[@class=\"checkmark-x\"])[3]")).click();
+		Thread.sleep(3000);
+		
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,350)", "");
+		
+		
+		driver.findElement(By.xpath("//button[@value=\"Next\"]")).click();
+		Thread.sleep(3000);
+		
+		
+		driver.findElement(By.xpath("(//button[@value=\"Add / Edit Details\"])[1]")).click();
+		Thread.sleep(2000);
+		
+	
+		driver.findElement(By.xpath("(//div[.='Per Bag'])[2]")).click();
+        driver.findElement(By.xpath("(//div[.='Per Kg'])[1]")).click();
+		
+		
+		driver.findElement(By.xpath("(//input[@autocomplete=\"new-password\"])[2]")).sendKeys("3000");
+		Thread.sleep(3000);
+		
+		JavascriptExecutor js1 = (JavascriptExecutor) driver;
+		js1.executeScript("window.scrollBy(0,350)", "");
+		
+		
+		
+	}
+	
+	
+	
+	
+	@Test(priority=2,groups="after terminal",enabled=false)
+	public void product() throws InterruptedException
+	{
+		
+		
+		
 		
 		
 		
@@ -93,7 +131,7 @@ public class EkbDB
 	
 	
 	
-	@AfterMethod
+	@AfterMethod(enabled=false)
 	public void close()
 	{
 		driver.quit();

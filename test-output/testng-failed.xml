@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="project.EkbDB">
+      <class name="project.Depends">
         <methods>
-          <include name="product"/>
-          <include name="Setup"/>
-          <include name="close"/>
+          <include name="searchpage"/>
+          <include name="regpage"/>
+          <include name="login"/>
+          <include name="homepage"/>
         </methods>
-      </class> <!-- project.EkbDB -->
+      </class> <!-- project.Depends -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
