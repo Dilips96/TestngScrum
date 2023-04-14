@@ -15,7 +15,7 @@ public class InvocationCountTest
 		System.out.println("Sum is ===="+ m);
 		
 		/*if you want to run the same test case multiple time then we go for invocation count;
-		 * we donot use invocationCountsome time you want to execute same test case again and again dump the data 
+		 * we donot use invocationCountsome time you want to execute same test case again and again dump the Data 
 		 * 
 		 * 
 		 * 
