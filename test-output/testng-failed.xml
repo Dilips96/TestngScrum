@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="project.Depends">
+      <class name="project.ExceptionTimeout">
         <methods>
-          <include name="searchpage"/>
-          <include name="regpage"/>
-          <include name="login"/>
-          <include name="homepage"/>
+          <include name="exceptiontout"/>
         </methods>
-      </class> <!-- project.Depends -->
+      </class> <!-- project.ExceptionTimeout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

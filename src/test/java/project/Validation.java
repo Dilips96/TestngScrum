@@ -1,28 +1,24 @@
 package project;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-  
-public class GoogleTest 
+public class Validation 
 {
-	
+
 	WebDriver driver;
 
-	
 	@BeforeMethod
 	public void Setup()
 	{
@@ -33,7 +29,7 @@ public class GoogleTest
 		
 		driver = new ChromeDriver(option);
 		
-		driver.get("https://v2trade.ekbazaar.com/");
+		driver.get("https://www.google.com/");
 	
 		
 		driver.manage().window().maximize();  // to maximise the Browser
@@ -46,52 +42,26 @@ public class GoogleTest
 	}
 	
 	
-	@Test(priority = 0)
-	public void launchbrowser()
+	@Test
+	public void googletest()
 	{
-		
-		
-		
-		String title = driver.getTitle();
-		System.out.println(title);
-		
-		
-		
-		
+		 String title=driver.getTitle();
+		 System.out.println(title);
+		 AssertJUnit.assertEquals(title, "Google");
 	}
 	
+	/* for validation purpose we are using Assertion
+	 * Assert.assertEquals(actual, expected);
+	 *  */
 	
-	@Test(priority =2)
-	public void logodisplay()
+	
+	
+	
+	@AfterMethod()
+	public void close()
 	{
-		 boolean s = driver.findElement(By.xpath("//*[@id=\"not-active-head\"]/div[2]/div/div[1]/div[2]/img")).isDisplayed();
+		driver.quit();
 	}
-	
-	@Test(priority=1)
-	public void pricingclick() throws InterruptedException
-	{
-		// boolean d = driver.findElement(By.xpath("//a[text()=\"Pricing\"]")).isDisplayed();
-		driver.findElement(By.xpath("//a[text()=\"Pricing\"]")).click();
-		Thread.sleep(3000);
-		
-	}
-	
-	
-	
-	
-	
-	@AfterMethod
-	public void closebrowser()
-	{
-		
-		driver.close();
-		
-		
-	}
-	
-	
-	
-	
 	
 	
 	

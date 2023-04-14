@@ -5,6 +5,10 @@
     <classes>
       <class name="project.GoogleTest"/>
       <class name="project.EkbDB"/>
+      <class name="project.InvocationCountTest"/>
+      <class name="project.Depends"/>
+      <class name="project.ExceptionTimeout"/>
+      <class name="project.Validation"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
