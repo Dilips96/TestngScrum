@@ -40,6 +40,7 @@ public class Parameters
 		driver.findElement(By.xpath("//button[@value=\"Next\"]")).click();
 		Thread.sleep(2000);
 		
+		System.out.println("Test");
 		
 		
 		
