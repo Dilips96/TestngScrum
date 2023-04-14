@@ -2,24 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-14T15:13:35 IST" name="Default suite" finished-at="2023-04-14T15:13:40 IST" duration-ms="5437">
+  <suite started-at="2023-04-14T17:42:29 IST" name="Default suite" finished-at="2023-04-14T17:43:15 IST" duration-ms="46415">
     <groups>
     </groups>
-    <test started-at="2023-04-14T15:13:35 IST" name="Default test" finished-at="2023-04-14T15:13:40 IST" duration-ms="5437">
-      <class name="project.Validation">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:project.Validation@3f197a46]" started-at="2023-04-14T15:13:35 IST" name="Setup" finished-at="2023-04-14T15:13:40 IST" duration-ms="5239" status="PASS">
+    <test started-at="2023-04-14T17:42:29 IST" name="Default test" finished-at="2023-04-14T17:43:15 IST" duration-ms="46415">
+      <class name="com.params.Parameters">
+        <test-method signature="yahoologin()[pri:0, instance:com.params.Parameters@63355449]" started-at="2023-04-14T17:42:29 IST" name="yahoologin" finished-at="2023-04-14T17:43:15 IST" duration-ms="46331" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="googletest()[pri:0, instance:project.Validation@3f197a46]" started-at="2023-04-14T15:13:40 IST" name="googletest" finished-at="2023-04-14T15:13:40 IST" duration-ms="18" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- googletest -->
-        <test-method is-config="true" signature="close()[pri:0, instance:project.Validation@3f197a46]" started-at="2023-04-14T15:13:40 IST" name="close" finished-at="2023-04-14T15:13:40 IST" duration-ms="115" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- project.Validation -->
+        </test-method> <!-- yahoologin -->
+      </class> <!-- com.params.Parameters -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

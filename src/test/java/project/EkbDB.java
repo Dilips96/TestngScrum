@@ -132,7 +132,7 @@ public class EkbDB
 	
 	
 	
-	@AfterMethod(enabled=false)
+	@AfterMethod()
 	public void close()
 	{
 		driver.quit();
