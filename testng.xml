@@ -7,6 +7,7 @@
       <class name="project.EkbDB"/>
       <class name="project.InvocationCountTest"/>
       <class name="project.Depends"/>
+      <class name="com.params.Parameters"/>
       <class name="project.ExceptionTimeout"/>
       <class name="project.Validation"/>
     </classes>

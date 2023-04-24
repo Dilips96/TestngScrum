@@ -1,9 +1,13 @@
 package com.params;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -26,6 +30,7 @@ public class Parameters
 		driver.get("https://login.yahoo.com/?.src=ym&pspid=159600001&activity=mail-direct&.lang=en-IN&.intl=in&.done=https%3A%2F%2Fin.mail.yahoo.com%2Fd");
 		
 		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//input[@autocomplete=\"username\"]")).clear();
 		
 		driver.findElement(By.xpath("//input[@autocomplete=\"username\"]")).sendKeys("dilipsahukar4@yahoo.com");
 		Thread.sleep(2000);
@@ -44,6 +49,17 @@ public class Parameters
 		
 		
 		
+	}
+	
+	
+	
+	
+	
+	
+	@AfterMethod
+	public void close()
+	{
+		driver.close();
 	}
 	
 	

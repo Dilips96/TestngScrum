@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.params.Parameters">
+      <class name="project.param">
         <methods>
-          <include name="yahoologin"/>
+          <include name="yahoo"/>
         </methods>
-      </class> <!-- com.params.Parameters -->
+      </class> <!-- project.param -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
