@@ -122,7 +122,7 @@ public class EkbDB
 		
 		
 		
-		
+		System.out.println("Quit");
 		
 		
 		
